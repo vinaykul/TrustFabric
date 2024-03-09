@@ -1,40 +1,42 @@
-# TrustFabric Identity specification
+# TrustFabric Identity Specification
 
-Navigation | [[Table Of Contents]](README.md#navigating-the-documentation)
+## Summary
 
-## Applications vs Services
+TrustFabric is a comprehensive Cloud Native Identity Specification designed for Applications. This specification covers aspects such as Identity Representation, Authentication, Authorization, Identity Revocation, and Interoperability. It aims to address the evolving security landscape and the unique challenges posed by the adoption of micro-services and cloud-native technology.
 
-**Note**: *This specification follows the definition as proposed by Jacob Jenkov [here](http://tutorials.jenkov.com/soa/services-applications.html)*
+## Understanding Applications and Services
 
-* Applications are accessed by users and may be accessed by other programs over network
-* Services are accessed by programs and may be accessed by users over network
-* In cloud-native world, both applications and services perform specialized operations
+**Note**: *This specification adopts the definitions proposed by Jacob Jenkov [here](http://tutorials.jenkov.com/soa/services-applications.html)*
 
-**Note**: Although the term application and service is used interchangeably in this document, TrustFabric uses *Application* as a standard term. The specification applies to both.
- 
-## What is TrustFabric
+* Applications are user-accessible and can also be accessed by other programs over a network.
+* Services are primarily accessed by programs, but can also be accessed by users over a network.
+* In the cloud-native context, both applications and services perform specialized operations.
 
-TrustFabric is an extensible Cloud Native Identity Specification for Applications. Specification includes:
+**Note**: While the terms 'application' and 'service' are used interchangeably in this document, TrustFabric consistently uses 'Application' as a standard term. The specification applies to both.
 
-* Application (a.k.a. Service) Identity Representation and Identity Injection
-* Application Identity Verification (Authentication) and Authorization
-* Identity Revocation and Invalidation
-* Interoperability and Extensibility
+## About TrustFabric
 
-## Why yet another specification?
+TrustFabric is a flexible Cloud Native Identity Specification for Applications. The specification includes:
 
-Security landscape is changing fast. Adoption of micro-services and cloud-native technology has changed the threat landscape. Here are few challenges:
+* Representation and Injection of Application (also known as Service) Identity.
+* Verification of Application Identity (Authentication) and Authorization.
+* Revocation and Invalidation of Identity.
+* Interoperability and Extensibility.
 
-1. Applications (a.k.a. Services) require an identity when interacting with each other
-1. Application impersonation is a new attack vector
-1. Application security is still dependent on static credentials 
-1. **Confused deputy** is new attack dimension with micro-services
-1. Holistic approach of IDM/IAM does not exist for applications
-1. Diversity of applications make it harder to standardize
+## The Need for a New Specification
+
+The security landscape is rapidly evolving. The rise of micro-services and cloud-native technology has altered the threat landscape. Here are a few challenges:
+
+1. Applications (also known as Services) need an identity for interactions.
+1. Application impersonation has emerged as a new attack vector.
+1. Application security often relies on static credentials.
+1. The 'Confused deputy' problem has become a new dimension of attack with micro-services.
+1. A comprehensive approach to IDM/IAM for applications is lacking.
+1. The diversity of applications complicates standardization.
 
 ## Navigating the Documentation
 
-Following sections provide a details for the specification:
+The following sections provide detailed information about the specification:
 
 * [Terminology](./Terminology.md)
 * [Goals](./Goals.md)
@@ -46,7 +48,4 @@ Following sections provide a details for the specification:
 * [Tokens and Validations](./Tokens.md)
 * [Integration](./Integrations.md) - gRPC, Envoy, Service Mesh, Generics and more
 * [Identity Protection](./StrongIdentity.md) - MitM, Confused deputy, replay attacks
-* FAQ
-
-
-
+* [FAQ](./FAQ.md)
